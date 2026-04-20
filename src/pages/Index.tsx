@@ -134,7 +134,7 @@ const Index = () => {
               </span>
               <h1 className="mt-5 font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
                 Изделия из пластика<br />
-                <span className="text-primary-glow">для бизнеса </span>
+                <span className="text-primary-glow">​для бизнеса</span>
               </h1>
               <p className="mt-5 text-lg md:text-xl max-w-2xl text-muted">
                 Чаши бассейнов, ёмкости, гальванические ванны, жироуловители, нефтеотделители. Собственное производство в Алматы. Поставка оборудования <strong>Flex Kraft</strong>.
