@@ -391,7 +391,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12">
+      <footer className="text-primary-foreground py-12 bg-[sidebar-accent-foreground] bg-slate-900">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
