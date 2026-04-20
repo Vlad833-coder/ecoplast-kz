@@ -125,7 +125,7 @@ const Index = () => {
           <img src={heroImg} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
-        <div className="container relative py-16 md:py-24 lg:py-28 bg-border">
+        <div className="container relative py-16 md:py-24 lg:py-28 bg-blue-900">
           <div className="grid lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3 animate-fade-in-up">
               <span className="inline-flex items-center gap-2 rounded-full backdrop-blur px-4 py-1.5 text-xs font-semibold uppercase tracking-wider border border-white/20 bg-blue-900">
