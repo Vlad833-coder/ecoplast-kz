@@ -397,7 +397,7 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-2.5">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 font-display font-bold">E</span>
-                <span className="font-display text-lg font-bold">Ecoplast.kz</span>
+                
               </div>
               <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
                 Сервисная компания. Изделия из пластика, оборудование Flex Kraft, ремонт и строительство по всему Казахстану.
