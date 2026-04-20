@@ -279,7 +279,7 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
-              <h2 className="font-display text-3xl md:text-4xl font-bold">Готовы рассчитать ваш проект?</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground">Готовы рассчитать ваш проект?</h2>
               <p className="mt-3 text-lg text-primary-foreground/85">Бесплатная консультация и расчёт в течение 30 минут.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
