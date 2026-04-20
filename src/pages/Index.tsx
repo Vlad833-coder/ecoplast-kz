@@ -85,7 +85,7 @@ const Index = () => {
           <a href="#" className="flex items-center gap-2.5">
             <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-hero text-primary-foreground font-display font-bold">E</span>
             <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg font-bold text-foreground">Ecoplast<span className="text-primary-glow">.kz</span></span>
+              <span className="font-display text-lg font-bold text-foreground">Ecoplast</span>
               <span className="text-[10px] uppercase tracking-widest text-muted-foreground">сервисная компания</span>
             </span>
           </a>
