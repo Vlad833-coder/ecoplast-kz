@@ -68,7 +68,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Top contact bar */}
       <div className="hidden lg:block bg-primary text-primary-foreground text-sm">
-        <div className="container flex items-center justify-between h-10">
+        <div className="container flex items-center justify-between h-10 bg-slate-900">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2 opacity-90"><MapPin className="h-3.5 w-3.5" /> Алматы, ул. Нусупбекова, 11/9</span>
             <span className="flex items-center gap-2 opacity-90"><Clock className="h-3.5 w-3.5" /> Пн–Пт 09:00–17:30 · Сб 10:00–15:00</span>
