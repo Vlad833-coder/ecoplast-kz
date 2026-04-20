@@ -280,7 +280,7 @@ const Index = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground">Готовы рассчитать ваш проект?</h2>
-              <p className="mt-3 text-lg text-primary-foreground/85">Бесплатная консультация и расчёт в течение 30 минут.</p>
+              <p className="mt-3 text-lg text-secondary-foreground">Бесплатная консультация и расчёт в течение 30 минут.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href={`tel:${PRIMARY_PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-accent px-7 py-4 font-display font-bold text-accent-foreground shadow-cta">
