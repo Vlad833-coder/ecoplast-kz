@@ -90,6 +90,11 @@ const Index = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [plasticOpen, setPlasticOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const openModal = (kind: "plastic" | "services") => {
+    if (kind === "plastic") setPlasticOpen(true);
+    else setServicesOpen(true);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -222,7 +227,7 @@ const Index = () => {
             {services.map((s) => (
               <article
                 key={s.title}
-                onClick={s.hasModal ? () => setPlasticOpen(true) : undefined}
+                onClick={s.hasModal ? () => openModal(s.hasModal) : undefined}
                 className={`group bg-card rounded-2xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-1 ${s.hasModal ? "cursor-pointer" : ""}`}
               >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
@@ -240,7 +245,7 @@ const Index = () => {
                   {s.hasModal ? (
                     <button
                       type="button"
-                      onClick={(e) => { e.stopPropagation(); setPlasticOpen(true); }}
+                      onClick={(e) => { e.stopPropagation(); openModal(s.hasModal!); }}
                       className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
                     >
                       Смотреть разделы <ChevronRight className="h-4 w-4" />
