@@ -199,7 +199,11 @@ const Index = () => {
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
-              <article key={s.title} className="group bg-card rounded-2xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-1">
+              <article
+                key={s.title}
+                onClick={s.hasModal ? () => setPlasticOpen(true) : undefined}
+                className={`group bg-card rounded-2xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-1 ${s.hasModal ? "cursor-pointer" : ""}`}
+              >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                   <img src={s.img} alt={s.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -212,9 +216,19 @@ const Index = () => {
                   </div>
                   <h3 className="mt-4 font-display text-xl font-bold text-foreground">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <a href="#quote" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all">
-                    Заказать расчёт <ChevronRight className="h-4 w-4" />
-                  </a>
+                  {s.hasModal ? (
+                    <button
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); setPlasticOpen(true); }}
+                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
+                    >
+                      Смотреть разделы <ChevronRight className="h-4 w-4" />
+                    </button>
+                  ) : (
+                    <a href="#quote" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all">
+                      Заказать расчёт <ChevronRight className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
