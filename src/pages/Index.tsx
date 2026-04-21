@@ -23,6 +23,15 @@ import subSeptic from "@/assets/sub-septic.jpg";
 import subNutch from "@/assets/sub-nutch.jpg";
 import subGrease from "@/assets/sub-grease.jpg";
 import subStorm from "@/assets/sub-storm.jpg";
+import srvPoolBuild from "@/assets/srv-pool-build.jpg";
+import srvVentilation from "@/assets/srv-ventilation.jpg";
+import srvElectric from "@/assets/srv-electric.jpg";
+import srvConcrete from "@/assets/srv-concrete.jpg";
+import srvWelding from "@/assets/srv-welding.jpg";
+import srvPlaster from "@/assets/srv-plaster.jpg";
+import srvDesign from "@/assets/srv-design.jpg";
+import srvRoof from "@/assets/srv-roof.jpg";
+import srvLining from "@/assets/srv-lining.jpg";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
@@ -39,10 +48,22 @@ const plasticSubcategories = [
   { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: subStorm },
 ];
 
+const servicesSubcategories = [
+  { title: "Строительство, ремонт, обслуживание, пусконаладка бассейнов", desc: "Полный цикл работ под ключ", img: srvPoolBuild },
+  { title: "Монтаж вентиляционных систем", desc: "Бассейны, бани, хамамы", img: srvVentilation },
+  { title: "ЭлектроПусконаладка", desc: "Электромонтаж и пусконаладочные работы", img: srvElectric },
+  { title: "Производство бетонных работ", desc: "Заливка, формовка, фундамент", img: srvConcrete },
+  { title: "Газоэлектросварочные работы", desc: "Сварка металлоконструкций", img: srvWelding },
+  { title: "Производство штукатурных работ", desc: "Чаши бассейнов и другие объекты", img: srvPlaster },
+  { title: "Проектирование", desc: "Разработка проектной документации", img: srvDesign },
+  { title: "Строительство крыш, павильонов", desc: "Каркасные конструкции и накрытия", img: srvRoof },
+  { title: "Облицовка и ремонт чаш бассейнов", desc: "Керамика, ПВХ-плёнка (алькорплан), полипропилен", img: srvLining },
+];
+
 const services = [
-  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: true },
+  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: "plastic" as const },
   { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
-  { icon: Hammer, title: "​Услуги", desc: "Каркас + сотовый поликарбонат. Под заказ.", price: "от 18 000 ₸/м²", img: greenhouseImg },
+  { icon: Hammer, title: "​Услуги", desc: "Полный комплекс монтажных и строительных работ.", price: "от 18 000 ₸/м²", img: greenhouseImg, hasModal: "services" as const },
 ];
 
 const advantages = [
@@ -69,6 +90,11 @@ const Index = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [plasticOpen, setPlasticOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const openModal = (kind: "plastic" | "services") => {
+    if (kind === "plastic") setPlasticOpen(true);
+    else setServicesOpen(true);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -201,7 +227,7 @@ const Index = () => {
             {services.map((s) => (
               <article
                 key={s.title}
-                onClick={s.hasModal ? () => setPlasticOpen(true) : undefined}
+                onClick={s.hasModal ? () => openModal(s.hasModal) : undefined}
                 className={`group bg-card rounded-2xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-1 ${s.hasModal ? "cursor-pointer" : ""}`}
               >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
@@ -219,7 +245,7 @@ const Index = () => {
                   {s.hasModal ? (
                     <button
                       type="button"
-                      onClick={(e) => { e.stopPropagation(); setPlasticOpen(true); }}
+                      onClick={(e) => { e.stopPropagation(); openModal(s.hasModal!); }}
                       className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
                     >
                       Смотреть разделы <ChevronRight className="h-4 w-4" />
@@ -477,6 +503,35 @@ const Index = () => {
                   <a
                     href="#quote"
                     onClick={() => setPlasticOpen(false)}
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:gap-2 transition-all"
+                  >
+                    Заказать расчёт <ChevronRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={servicesOpen} onOpenChange={setServicesOpen}>
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl md:text-3xl">Услуги</DialogTitle>
+            <DialogDescription>Выберите интересующий раздел — выполним под ключ.</DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {servicesSubcategories.map((sub) => (
+              <article key={sub.title} className="group bg-card rounded-xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={sub.img} alt={sub.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display text-base font-bold text-foreground leading-snug">{sub.title}</h3>
+                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{sub.desc}</p>
+                  <a
+                    href="#quote"
+                    onClick={() => setServicesOpen(false)}
                     className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:gap-2 transition-all"
                   >
                     Заказать расчёт <ChevronRight className="h-3.5 w-3.5" />
