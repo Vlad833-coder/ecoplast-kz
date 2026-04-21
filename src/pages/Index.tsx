@@ -20,7 +20,7 @@ const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
 const services = [
   { icon: Container, title: "Изделия из пластика", desc: "Для воды, химреактивов, септики, жироуловители.", price: "от 50 000 ₸", img: tanksImg },
   { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
-  { icon: Hammer, title: "Теплицы", desc: "Каркас + сотовый поликарбонат. Под заказ.", price: "от 18 000 ₸/м²", img: greenhouseImg },
+  { icon: Hammer, title: "​Услуги", desc: "Каркас + сотовый поликарбонат. Под заказ.", price: "от 18 000 ₸/м²", img: greenhouseImg },
 ];
 
 const advantages = [
