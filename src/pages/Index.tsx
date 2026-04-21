@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { CallButton, PRIMARY_PHONE, PRIMARY_PHONE_DISPLAY } from "@/components/CallButton";
 import { QuoteForm } from "@/components/QuoteForm";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import heroImg from "@/assets/hero-ecoplast.jpg";
 import poolImg from "@/assets/service-pool.jpg";
 import tanksImg from "@/assets/service-tanks.jpg";
@@ -13,12 +14,33 @@ import galvanicImg from "@/assets/service-galvanic.jpg";
 import sheetsImg from "@/assets/service-sheets.jpg";
 import woodImg from "@/assets/service-wood.jpg";
 import greenhouseImg from "@/assets/service-greenhouse.jpg";
+import subSheets from "@/assets/sub-sheets.jpg";
+import subAbs from "@/assets/sub-abs.jpg";
+import subPoolBowl from "@/assets/sub-poolbowl.jpg";
+import subPoolEquip from "@/assets/sub-poolequip.jpg";
+import subTanks from "@/assets/sub-tanks.jpg";
+import subSeptic from "@/assets/sub-septic.jpg";
+import subNutch from "@/assets/sub-nutch.jpg";
+import subGrease from "@/assets/sub-grease.jpg";
+import subStorm from "@/assets/sub-storm.jpg";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
 
+const plasticSubcategories = [
+  { title: "Листовой полипропилен, полиэтилен, фторопласт", desc: "Листовые пластики разных марок и толщин", img: subSheets },
+  { title: "ABS пластик", desc: "Листы и изделия из ABS", img: subAbs },
+  { title: "Чаши для бассейна из полипропилена", desc: "Изготовление, ремонт, обслуживание", img: subPoolBowl },
+  { title: "Оборудование для бассейнов", desc: "Монтаж, обслуживание, ремонт", img: subPoolEquip },
+  { title: "Ёмкости и резервуары", desc: "Для воды и агрессивных жидкостей", img: subTanks },
+  { title: "Септики", desc: "Строительство септиков", img: subSeptic },
+  { title: "НУТЧ фильтры", desc: "Промышленная фильтрация", img: subNutch },
+  { title: "Жироуловители", desc: "Для кухонь и предприятий питания", img: subGrease },
+  { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: subStorm },
+];
+
 const services = [
-  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg },
+  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: true },
   { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
   { icon: Hammer, title: "​Услуги", desc: "Каркас + сотовый поликарбонат. Под заказ.", price: "от 18 000 ₸/м²", img: greenhouseImg },
 ];
