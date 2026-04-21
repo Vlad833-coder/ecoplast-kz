@@ -133,7 +133,7 @@ const Index = () => {
                 19 лет на рынке Казахстана
               </span>
               <h1 className="mt-5 font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
-                <span className="text-primary-glow">​строительство и ремонт бассейнов</span>
+                <span className="text-primary-foreground">​Строительство и обслуживание бассейнов</span>
               </h1>
               <p className="mt-5 text-lg md:text-xl max-w-2xl text-muted">
                 Чаши бассейнов, ёмкости, гальванические ванны, жироуловители, нефтеотделители. Собственное производство в Алматы. Поставка оборудования <strong>Flex Kraft</strong>.
