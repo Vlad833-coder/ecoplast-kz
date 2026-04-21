@@ -23,6 +23,15 @@ import subSeptic from "@/assets/sub-septic.jpg";
 import subNutch from "@/assets/sub-nutch.jpg";
 import subGrease from "@/assets/sub-grease.jpg";
 import subStorm from "@/assets/sub-storm.jpg";
+import srvPoolBuild from "@/assets/srv-pool-build.jpg";
+import srvVentilation from "@/assets/srv-ventilation.jpg";
+import srvElectric from "@/assets/srv-electric.jpg";
+import srvConcrete from "@/assets/srv-concrete.jpg";
+import srvWelding from "@/assets/srv-welding.jpg";
+import srvPlaster from "@/assets/srv-plaster.jpg";
+import srvDesign from "@/assets/srv-design.jpg";
+import srvRoof from "@/assets/srv-roof.jpg";
+import srvLining from "@/assets/srv-lining.jpg";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
@@ -39,10 +48,22 @@ const plasticSubcategories = [
   { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: subStorm },
 ];
 
+const servicesSubcategories = [
+  { title: "Строительство, ремонт, обслуживание, пусконаладка бассейнов", desc: "Полный цикл работ под ключ", img: srvPoolBuild },
+  { title: "Монтаж вентиляционных систем", desc: "Бассейны, бани, хамамы", img: srvVentilation },
+  { title: "ЭлектроПусконаладка", desc: "Электромонтаж и пусконаладочные работы", img: srvElectric },
+  { title: "Производство бетонных работ", desc: "Заливка, формовка, фундамент", img: srvConcrete },
+  { title: "Газоэлектросварочные работы", desc: "Сварка металлоконструкций", img: srvWelding },
+  { title: "Производство штукатурных работ", desc: "Чаши бассейнов и другие объекты", img: srvPlaster },
+  { title: "Проектирование", desc: "Разработка проектной документации", img: srvDesign },
+  { title: "Строительство крыш, павильонов", desc: "Каркасные конструкции и накрытия", img: srvRoof },
+  { title: "Облицовка и ремонт чаш бассейнов", desc: "Керамика, ПВХ-плёнка (алькорплан), полипропилен", img: srvLining },
+];
+
 const services = [
-  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: true },
+  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: "plastic" as const },
   { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
-  { icon: Hammer, title: "​Услуги", desc: "Каркас + сотовый поликарбонат. Под заказ.", price: "от 18 000 ₸/м²", img: greenhouseImg },
+  { icon: Hammer, title: "​Услуги", desc: "Полный комплекс монтажных и строительных работ.", price: "от 18 000 ₸/м²", img: greenhouseImg, hasModal: "services" as const },
 ];
 
 const advantages = [
