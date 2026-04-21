@@ -459,6 +459,35 @@ const Index = () => {
         </div>
       </footer>
 
+      <Dialog open={plasticOpen} onOpenChange={setPlasticOpen}>
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl md:text-3xl">Изделия из пластика</DialogTitle>
+            <DialogDescription>Выберите интересующий раздел — мы изготовим под ваши задачи.</DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {plasticSubcategories.map((sub) => (
+              <article key={sub.title} className="group bg-card rounded-xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={sub.img} alt={sub.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display text-base font-bold text-foreground leading-snug">{sub.title}</h3>
+                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{sub.desc}</p>
+                  <a
+                    href="#quote"
+                    onClick={() => setPlasticOpen(false)}
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:gap-2 transition-all"
+                  >
+                    Заказать расчёт <ChevronRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <CallButton variant="floating" />
     </div>
   );
