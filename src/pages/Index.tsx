@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { CallButton, PRIMARY_PHONE, PRIMARY_PHONE_DISPLAY } from "@/components/CallButton";
 import { QuoteForm } from "@/components/QuoteForm";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import heroImg from "@/assets/hero-ecoplast.jpg";
 import poolImg from "@/assets/service-pool.jpg";
 import tanksImg from "@/assets/service-tanks.jpg";
@@ -13,12 +14,33 @@ import galvanicImg from "@/assets/service-galvanic.jpg";
 import sheetsImg from "@/assets/service-sheets.jpg";
 import woodImg from "@/assets/service-wood.jpg";
 import greenhouseImg from "@/assets/service-greenhouse.jpg";
+import subSheets from "@/assets/sub-sheets.jpg";
+import subAbs from "@/assets/sub-abs.jpg";
+import subPoolBowl from "@/assets/sub-poolbowl.jpg";
+import subPoolEquip from "@/assets/sub-poolequip.jpg";
+import subTanks from "@/assets/sub-tanks.jpg";
+import subSeptic from "@/assets/sub-septic.jpg";
+import subNutch from "@/assets/sub-nutch.jpg";
+import subGrease from "@/assets/sub-grease.jpg";
+import subStorm from "@/assets/sub-storm.jpg";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
 
+const plasticSubcategories = [
+  { title: "Листовой полипропилен, полиэтилен, фторопласт", desc: "Листовые пластики разных марок и толщин", img: subSheets },
+  { title: "ABS пластик", desc: "Листы и изделия из ABS", img: subAbs },
+  { title: "Чаши для бассейна из полипропилена", desc: "Изготовление, ремонт, обслуживание", img: subPoolBowl },
+  { title: "Оборудование для бассейнов", desc: "Монтаж, обслуживание, ремонт", img: subPoolEquip },
+  { title: "Ёмкости и резервуары", desc: "Для воды и агрессивных жидкостей", img: subTanks },
+  { title: "Септики", desc: "Строительство септиков", img: subSeptic },
+  { title: "НУТЧ фильтры", desc: "Промышленная фильтрация", img: subNutch },
+  { title: "Жироуловители", desc: "Для кухонь и предприятий питания", img: subGrease },
+  { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: subStorm },
+];
+
 const services = [
-  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg },
+  { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: true },
   { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
   { icon: Hammer, title: "​Услуги", desc: "Каркас + сотовый поликарбонат. Под заказ.", price: "от 18 000 ₸/м²", img: greenhouseImg },
 ];
@@ -46,6 +68,7 @@ const reviews = [
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [plasticOpen, setPlasticOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -176,7 +199,11 @@ const Index = () => {
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
-              <article key={s.title} className="group bg-card rounded-2xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-1">
+              <article
+                key={s.title}
+                onClick={s.hasModal ? () => setPlasticOpen(true) : undefined}
+                className={`group bg-card rounded-2xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-1 ${s.hasModal ? "cursor-pointer" : ""}`}
+              >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                   <img src={s.img} alt={s.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -189,9 +216,19 @@ const Index = () => {
                   </div>
                   <h3 className="mt-4 font-display text-xl font-bold text-foreground">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <a href="#quote" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all">
-                    Заказать расчёт <ChevronRight className="h-4 w-4" />
-                  </a>
+                  {s.hasModal ? (
+                    <button
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); setPlasticOpen(true); }}
+                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
+                    >
+                      Смотреть разделы <ChevronRight className="h-4 w-4" />
+                    </button>
+                  ) : (
+                    <a href="#quote" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all">
+                      Заказать расчёт <ChevronRight className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
@@ -421,6 +458,35 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <Dialog open={plasticOpen} onOpenChange={setPlasticOpen}>
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl md:text-3xl">Изделия из пластика</DialogTitle>
+            <DialogDescription>Выберите интересующий раздел — мы изготовим под ваши задачи.</DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {plasticSubcategories.map((sub) => (
+              <article key={sub.title} className="group bg-card rounded-xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={sub.img} alt={sub.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display text-base font-bold text-foreground leading-snug">{sub.title}</h3>
+                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{sub.desc}</p>
+                  <a
+                    href="#quote"
+                    onClick={() => setPlasticOpen(false)}
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:gap-2 transition-all"
+                  >
+                    Заказать расчёт <ChevronRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <CallButton variant="floating" />
     </div>
