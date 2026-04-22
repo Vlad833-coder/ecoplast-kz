@@ -69,7 +69,7 @@ const galvanicSubcategories = [
 
 const services = [
   { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: "plastic" as const },
-  { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
+  { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg, hasModal: "galvanic" as const },
   { icon: Hammer, title: "​Услуги", desc: "Полный комплекс монтажных и строительных работ.", price: "от 18 000 ₸/м²", img: greenhouseImg, hasModal: "services" as const },
 ];
 
