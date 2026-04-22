@@ -14,57 +14,40 @@ import galvanicImg from "@/assets/service-galvanic.jpg";
 import sheetsImg from "@/assets/service-sheets.jpg";
 import woodImg from "@/assets/service-wood.jpg";
 import greenhouseImg from "@/assets/service-greenhouse.jpg";
-import subSheets from "@/assets/sub-sheets.jpg";
-import subAbs from "@/assets/sub-abs.jpg";
-import subPoolBowl from "@/assets/sub-poolbowl.jpg";
-import subPoolEquip from "@/assets/sub-poolequip.jpg";
-import subTanks from "@/assets/sub-tanks.jpg";
-import subSeptic from "@/assets/sub-septic.jpg";
-import subNutch from "@/assets/sub-nutch.jpg";
-import subGrease from "@/assets/sub-grease.jpg";
-import subStorm from "@/assets/sub-storm.jpg";
-import srvPoolBuild from "@/assets/srv-pool-build.jpg";
-import srvVentilation from "@/assets/srv-ventilation.jpg";
-import srvElectric from "@/assets/srv-electric.jpg";
-import srvConcrete from "@/assets/srv-concrete.jpg";
-import srvWelding from "@/assets/srv-welding.jpg";
-import srvPlaster from "@/assets/srv-plaster.jpg";
-import srvDesign from "@/assets/srv-design.jpg";
-import srvRoof from "@/assets/srv-roof.jpg";
-import srvLining from "@/assets/srv-lining.jpg";
-import galvRectifier from "@/assets/galv-rectifier.png";
-import galvWelding from "@/assets/galv-welding.png";
+import modalPlasticImg from "@/assets/modal-plastic.webp";
+import modalGalvanicImg from "@/assets/modal-galvanic.webp";
+import modalServicesImg from "@/assets/modal-services.webp";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
 
 const plasticSubcategories = [
-  { title: "Листовой полипропилен, полиэтилен, фторопласт", desc: "Листовые пластики разных марок и толщин", img: subSheets },
-  { title: "ABS пластик", desc: "Листы и изделия из ABS", img: subAbs },
-  { title: "Чаши для бассейна из полипропилена", desc: "Изготовление, ремонт, обслуживание", img: subPoolBowl },
-  { title: "Оборудование для бассейнов", desc: "Монтаж, обслуживание, ремонт", img: subPoolEquip },
-  { title: "Ёмкости и резервуары", desc: "Для воды и агрессивных жидкостей", img: subTanks },
-  { title: "Септики", desc: "Строительство септиков", img: subSeptic },
-  { title: "НУТЧ фильтры", desc: "Промышленная фильтрация", img: subNutch },
-  { title: "Жироуловители", desc: "Для кухонь и предприятий питания", img: subGrease },
-  { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: subStorm },
+  { title: "Листовой полипропилен, полиэтилен, фторопласт", desc: "Листовые пластики разных марок и толщин", img: modalPlasticImg },
+  { title: "ABS пластик", desc: "Листы и изделия из ABS", img: modalPlasticImg },
+  { title: "Чаши для бассейна из полипропилена", desc: "Изготовление, ремонт, обслуживание", img: modalPlasticImg },
+  { title: "Оборудование для бассейнов", desc: "Монтаж, обслуживание, ремонт", img: modalPlasticImg },
+  { title: "Ёмкости и резервуары", desc: "Для воды и агрессивных жидкостей", img: modalPlasticImg },
+  { title: "Септики", desc: "Строительство септиков", img: modalPlasticImg },
+  { title: "НУТЧ фильтры", desc: "Промышленная фильтрация", img: modalPlasticImg },
+  { title: "Жироуловители", desc: "Для кухонь и предприятий питания", img: modalPlasticImg },
+  { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: modalPlasticImg },
 ];
 
 const servicesSubcategories = [
-  { title: "Строительство, ремонт, обслуживание, пусконаладка бассейнов", desc: "Полный цикл работ под ключ", img: srvPoolBuild },
-  { title: "Монтаж вентиляционных систем", desc: "Бассейны, бани, хамамы", img: srvVentilation },
-  { title: "ЭлектроПусконаладка", desc: "Электромонтаж и пусконаладочные работы", img: srvElectric },
-  { title: "Производство бетонных работ", desc: "Заливка, формовка, фундамент", img: srvConcrete },
-  { title: "Газоэлектросварочные работы", desc: "Сварка металлоконструкций", img: srvWelding },
-  { title: "Производство штукатурных работ", desc: "Чаши бассейнов и другие объекты", img: srvPlaster },
-  { title: "Проектирование", desc: "Разработка проектной документации", img: srvDesign },
-  { title: "Строительство крыш, павильонов", desc: "Каркасные конструкции и накрытия", img: srvRoof },
-  { title: "Облицовка и ремонт чаш бассейнов", desc: "Керамика, ПВХ-плёнка (алькорплан), полипропилен", img: srvLining },
+  { title: "Строительство, ремонт, обслуживание, пусконаладка бассейнов", desc: "Полный цикл работ под ключ", img: modalServicesImg },
+  { title: "Монтаж вентиляционных систем", desc: "Бассейны, бани, хамамы", img: modalServicesImg },
+  { title: "ЭлектроПусконаладка", desc: "Электромонтаж и пусконаладочные работы", img: modalServicesImg },
+  { title: "Производство бетонных работ", desc: "Заливка, формовка, фундамент", img: modalServicesImg },
+  { title: "Газоэлектросварочные работы", desc: "Сварка металлоконструкций", img: modalServicesImg },
+  { title: "Производство штукатурных работ", desc: "Чаши бассейнов и другие объекты", img: modalServicesImg },
+  { title: "Проектирование", desc: "Разработка проектной документации", img: modalServicesImg },
+  { title: "Строительство крыш, павильонов", desc: "Каркасные конструкции и накрытия", img: modalServicesImg },
+  { title: "Облицовка и ремонт чаш бассейнов", desc: "Керамика, ПВХ-плёнка (алькорплан), полипропилен", img: modalServicesImg },
 ];
 
 const galvanicSubcategories = [
-  { title: "Выпрямители Flex Kraft Power Con", desc: "Промышленные выпрямители для гальванических процессов", img: galvRectifier },
-  { title: "Сварочное оборудование по пластику", desc: "Leister и Алга — профессиональные сварочные инструменты", img: galvWelding },
+  { title: "Выпрямители Flex Kraft Power Con", desc: "Промышленные выпрямители для гальванических процессов", img: modalGalvanicImg },
+  { title: "Сварочное оборудование по пластику", desc: "Leister и Алга — профессиональные сварочные инструменты", img: modalGalvanicImg },
 ];
 
 const services = [
