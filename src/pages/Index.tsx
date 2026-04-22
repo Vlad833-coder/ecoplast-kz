@@ -98,8 +98,10 @@ const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [plasticOpen, setPlasticOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const openModal = (kind: "plastic" | "services") => {
+  const [galvanicOpen, setGalvanicOpen] = useState(false);
+  const openModal = (kind: "plastic" | "services" | "galvanic") => {
     if (kind === "plastic") setPlasticOpen(true);
+    else if (kind === "galvanic") setGalvanicOpen(true);
     else setServicesOpen(true);
   };
 
