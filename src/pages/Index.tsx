@@ -32,6 +32,8 @@ import srvPlaster from "@/assets/srv-plaster.jpg";
 import srvDesign from "@/assets/srv-design.jpg";
 import srvRoof from "@/assets/srv-roof.jpg";
 import srvLining from "@/assets/srv-lining.jpg";
+import galvRectifier from "@/assets/galv-rectifier.png";
+import galvWelding from "@/assets/galv-welding.png";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
