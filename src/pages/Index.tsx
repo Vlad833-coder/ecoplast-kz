@@ -62,6 +62,11 @@ const servicesSubcategories = [
   { title: "Облицовка и ремонт чаш бассейнов", desc: "Керамика, ПВХ-плёнка (алькорплан), полипропилен", img: srvLining },
 ];
 
+const galvanicSubcategories = [
+  { title: "Выпрямители Flex Kraft Power Con", desc: "Промышленные выпрямители для гальванических процессов", img: galvRectifier },
+  { title: "Сварочное оборудование по пластику", desc: "Leister и Алга — профессиональные сварочные инструменты", img: galvWelding },
+];
+
 const services = [
   { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: "plastic" as const },
   { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
