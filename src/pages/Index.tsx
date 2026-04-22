@@ -32,6 +32,8 @@ import srvPlaster from "@/assets/srv-plaster.jpg";
 import srvDesign from "@/assets/srv-design.jpg";
 import srvRoof from "@/assets/srv-roof.jpg";
 import srvLining from "@/assets/srv-lining.jpg";
+import galvRectifier from "@/assets/galv-rectifier.png";
+import galvWelding from "@/assets/galv-welding.png";
 
 const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
@@ -60,9 +62,14 @@ const servicesSubcategories = [
   { title: "Облицовка и ремонт чаш бассейнов", desc: "Керамика, ПВХ-плёнка (алькорплан), полипропилен", img: srvLining },
 ];
 
+const galvanicSubcategories = [
+  { title: "Выпрямители Flex Kraft Power Con", desc: "Промышленные выпрямители для гальванических процессов", img: galvRectifier },
+  { title: "Сварочное оборудование по пластику", desc: "Leister и Алга — профессиональные сварочные инструменты", img: galvWelding },
+];
+
 const services = [
   { icon: Container, title: "Изделия из пластика", desc: "​Полипропилен, полиэтилен", price: "от 50 000 ₸", img: tanksImg, hasModal: "plastic" as const },
-  { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg },
+  { icon: Cog, title: "Гальваническое и сварочное оборудование", desc: "Промышленные ванны и оборудование Flex Kraft.", price: "от 70 000 ₸", img: galvanicImg, hasModal: "galvanic" as const },
   { icon: Hammer, title: "​Услуги", desc: "Полный комплекс монтажных и строительных работ.", price: "от 18 000 ₸/м²", img: greenhouseImg, hasModal: "services" as const },
 ];
 
@@ -91,8 +98,10 @@ const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [plasticOpen, setPlasticOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const openModal = (kind: "plastic" | "services") => {
+  const [galvanicOpen, setGalvanicOpen] = useState(false);
+  const openModal = (kind: "plastic" | "services" | "galvanic") => {
     if (kind === "plastic") setPlasticOpen(true);
+    else if (kind === "galvanic") setGalvanicOpen(true);
     else setServicesOpen(true);
   };
 
@@ -532,6 +541,35 @@ const Index = () => {
                   <a
                     href="#quote"
                     onClick={() => setServicesOpen(false)}
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:gap-2 transition-all"
+                  >
+                    Заказать расчёт <ChevronRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={galvanicOpen} onOpenChange={setGalvanicOpen}>
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl md:text-3xl">Гальваническое и сварочное оборудование</DialogTitle>
+            <DialogDescription>Выберите интересующий раздел — мы подберём оборудование под ваши задачи.</DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 grid sm:grid-cols-2 gap-5">
+            {galvanicSubcategories.map((sub) => (
+              <article key={sub.title} className="group bg-card rounded-xl overflow-hidden border shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={sub.img} alt={sub.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display text-base font-bold text-foreground leading-snug">{sub.title}</h3>
+                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{sub.desc}</p>
+                  <a
+                    href="#quote"
+                    onClick={() => setGalvanicOpen(false)}
                     className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:gap-2 transition-all"
                   >
                     Заказать расчёт <ChevronRight className="h-3.5 w-3.5" />
