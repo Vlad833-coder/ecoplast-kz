@@ -210,7 +210,7 @@ const Index = () => {
               <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
                 {[
                   { v: "19+", l: "лет опыта" },
-                  { v: "1000+", l: "проектов" },
+                  { v: "25+", l: "проектов" },
                   { v: "100%", l: "по РК" },
                 ].map((s) => (
                   <div key={s.l}>
