@@ -26,6 +26,12 @@ import subSeptic from "@/assets/sub-septic.jpg";
 import subNutch from "@/assets/sub-nutch.jpg";
 import subGrease from "@/assets/sub-grease.jpg";
 import subStorm from "@/assets/sub-storm.jpg";
+import plasticSheetImg from "@/assets/plastic-sheet.webp";
+import plasticPoolBowlImg from "@/assets/plastic-pool-bowl.webp";
+import plasticTanksImg from "@/assets/plastic-tanks.webp";
+import plasticNutscheImg from "@/assets/plastic-nutsche.webp";
+import plasticGreaseTrapImg from "@/assets/plastic-grease-trap.webp";
+import plasticStormwaterImg from "@/assets/plastic-stormwater.webp";
 import srvPoolBuild from "@/assets/srv-pool-build.jpg";
 import srvVentilation from "@/assets/srv-ventilation.jpg";
 import srvElectric from "@/assets/srv-electric.jpg";
@@ -42,15 +48,15 @@ const SECONDARY_PHONE = "+77273270527";
 const SECONDARY_PHONE_DISPLAY = "+7 (727) 327-05-27";
 
 const plasticSubcategories = [
-  { title: "Листовой полипропилен, полиэтилен, фторопласт", desc: "Листовые пластики разных марок и толщин", img: subSheets },
+  { title: "Листовой полипропилен, полиэтилен, фторопласт", desc: "Листовые пластики разных марок и толщин", img: plasticSheetImg },
   { title: "ABS пластик", desc: "Листы и изделия из ABS", img: subAbs },
-  { title: "Чаши для бассейна из полипропилена", desc: "Изготовление, ремонт, обслуживание", img: subPoolBowl },
+  { title: "Чаши для бассейна из полипропилена", desc: "Изготовление, ремонт, обслуживание", img: plasticPoolBowlImg },
   { title: "Оборудование для бассейнов", desc: "Монтаж, обслуживание, ремонт", img: subPoolEquip },
-  { title: "Ёмкости и резервуары", desc: "Для воды и агрессивных жидкостей", img: subTanks },
+  { title: "Ёмкости и резервуары", desc: "Для воды и агрессивных жидкостей", img: plasticTanksImg },
   { title: "Септики", desc: "Строительство септиков", img: subSeptic },
-  { title: "НУТЧ фильтры", desc: "Промышленная фильтрация", img: subNutch },
-  { title: "Жироуловители", desc: "Для кухонь и предприятий питания", img: subGrease },
-  { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: subStorm },
+  { title: "НУТЧ фильтры", desc: "Промышленная фильтрация", img: plasticNutscheImg },
+  { title: "Жироуловители", desc: "Для кухонь и предприятий питания", img: plasticGreaseTrapImg },
+  { title: "Ливневые очистные станции / нефтеуловители", desc: "Очистка ливневых и сточных вод", img: plasticStormwaterImg },
 ];
 
 const servicesSubcategories = [
