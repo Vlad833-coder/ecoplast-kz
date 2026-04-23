@@ -50,7 +50,7 @@ export const QuoteForm = ({ compact = false }: Props) => {
         required
         maxLength={80}
         placeholder="Ваше имя"
-        className="w-full h-12 px-4 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+        className="w-full h-12 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
       />
       <input
         name="phone"
@@ -58,14 +58,14 @@ export const QuoteForm = ({ compact = false }: Props) => {
         required
         maxLength={30}
         placeholder="+7 (___) ___-__-__"
-        className="w-full h-12 px-4 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+        className="w-full h-12 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
       />
       <textarea
         name="message"
         maxLength={500}
         rows={3}
         placeholder="Кратко опишите задачу (необязательно)"
-        className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
       />
       <button
         type="submit"
