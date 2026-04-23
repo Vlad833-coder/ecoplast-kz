@@ -16,7 +16,7 @@ import woodImg from "@/assets/service-wood.jpg";
 import greenhouseImg from "@/assets/service-greenhouse.jpg";
 import modalPlasticImg from "@/assets/e5987830-d291-4ba4-b29f-ac7965fc728f.webp";
 import modalGalvanicImg from "@/assets/modal-galvanic.webp";
-import modalServicesImg from "@/assets/modal-services.webp";
+import modalServicesImg from "@/assets/services-main.webp";
 import subSheets from "@/assets/sub-sheets.jpg";
 import subAbs from "@/assets/sub-abs.jpg";
 import subPoolBowl from "@/assets/sub-poolbowl.jpg";
