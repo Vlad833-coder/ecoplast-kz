@@ -234,7 +234,7 @@ const Index = () => {
           <div className="max-w-2xl">
             <span className="text-sm font-semibold text-accent uppercase tracking-widest">Каталог</span>
             <h2 className="mt-3 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Товары и услуги
+              ​Изделия из пластика
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Полный цикл: от проектирования до монтажа. Изготавливаем под заказ под любые задачи.
