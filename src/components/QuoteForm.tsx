@@ -27,12 +27,24 @@ export const QuoteForm = ({ compact = false }: Props) => {
       toast.error(parsed.error.issues[0].message);
       return;
     }
+
+    const { name, phone, message } = parsed.data;
+    const whatsappText = [
+      "Здравствуйте! Хочу получить расчёт стоимости.",
+      `Имя: ${name}`,
+      `Телефон: ${phone}`,
+      message ? `Описание: ${message}` : null,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const whatsappUrl = `https://wa.me/77071062006?text=${encodeURIComponent(whatsappText)}`;
+
     setLoading(true);
-    // Simulated submission — connect Lovable Cloud later for real backend.
-    await new Promise((r) => setTimeout(r, 800));
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setLoading(false);
     setDone(true);
-    toast.success("Заявка отправлена! Мы свяжемся в течение 30 минут.");
+    toast.success("Открываем WhatsApp с вашей заявкой.");
     (e.target as HTMLFormElement).reset();
     setTimeout(() => setDone(false), 4000);
   };
