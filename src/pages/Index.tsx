@@ -34,7 +34,7 @@ import plasticGreaseTrapImg from "@/assets/plastic-grease-trap.webp";
 import plasticStormwaterImg from "@/assets/plastic-stormwater.webp";
 import srvPoolBuild from "@/assets/40534485-9404-42e4-a3e7-db1982d29651.webp";
 import srvVentilation from "@/assets/srv-ventilation.jpg";
-import srvElectric from "@/assets/srv-electric.jpg";
+import srvElectric from "@/assets/4fb6aabc-abf2-4ea2-acd6-c5ecf289695d.webp";
 import srvConcrete from "@/assets/srv-concrete.jpg";
 import srvWelding from "@/assets/srv-welding.jpg";
 import srvPlaster from "@/assets/srv-plaster.jpg";
