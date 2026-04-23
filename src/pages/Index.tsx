@@ -40,6 +40,7 @@ import srvWelding from "@/assets/91dc30e5-32a0-46eb-b237-37817f49f1ec.webp";
 import srvPlaster from "@/assets/srv-plaster.jpg";
 import srvDesign from "@/assets/srv-design.jpg";
 import srvRoof from "@/assets/a3725026-2f82-4174-a3d1-fd23b217ba50.webp";
+import ecoplastLogo from "@/assets/ecoplast-logo.svg";
 import srvLining from "@/assets/srv-lining.jpg";
 import galvRectifier from "@/assets/75056f35-5a0f-4799-a2a6-9dd49bcee2c2.webp";
 import galvWelding from "@/assets/e59da0f9-0086-4178-a815-61f0a1a3ac8a.webp";
@@ -147,7 +148,7 @@ const Index = () => {
       <header className={`sticky top-0 z-40 transition-all ${scrolled ? "bg-background/95 backdrop-blur shadow-soft" : "bg-background"}`}>
         <div className="container flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-hero text-primary-foreground font-display font-bold">E</span>
+            <img src={ecoplastLogo} alt="Ecoplast" className="h-10 w-10 object-contain" />
             <span className="flex flex-col leading-tight">
               <span className="font-display text-lg font-bold text-foreground">Ecoplast</span>
               <span className="text-[10px] uppercase tracking-widest text-muted-foreground">сервисная компания</span>
@@ -470,8 +471,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-2.5">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 font-display font-bold">E</span>
-                
+                <img src={ecoplastLogo} alt="Ecoplast" className="h-10 w-10 object-contain" />
               </div>
               <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
                 Сервисная компания. Изделия из пластика, оборудование Flex Kraft, ремонт и строительство по всему Казахстану.
