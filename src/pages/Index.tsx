@@ -14,7 +14,7 @@ import galvanicImg from "@/assets/service-galvanic.jpg";
 import sheetsImg from "@/assets/service-sheets.jpg";
 import woodImg from "@/assets/service-wood.jpg";
 import greenhouseImg from "@/assets/service-greenhouse.jpg";
-import modalPlasticImg from "@/assets/modal-plastic.webp";
+import modalPlasticImg from "@/assets/e5987830-d291-4ba4-b29f-ac7965fc728f.webp";
 import modalGalvanicImg from "@/assets/modal-galvanic.webp";
 import modalServicesImg from "@/assets/modal-services.webp";
 import subSheets from "@/assets/sub-sheets.jpg";
