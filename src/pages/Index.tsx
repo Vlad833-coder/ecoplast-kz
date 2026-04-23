@@ -32,7 +32,7 @@ import plasticTanksImg from "@/assets/plastic-tanks.webp";
 import plasticNutscheImg from "@/assets/plastic-nutsche.webp";
 import plasticGreaseTrapImg from "@/assets/plastic-grease-trap.webp";
 import plasticStormwaterImg from "@/assets/plastic-stormwater.webp";
-import srvPoolBuild from "@/assets/srv-pool-build.jpg";
+import srvPoolBuild from "@/assets/40534485-9404-42e4-a3e7-db1982d29651.webp";
 import srvVentilation from "@/assets/srv-ventilation.jpg";
 import srvElectric from "@/assets/srv-electric.jpg";
 import srvConcrete from "@/assets/srv-concrete.jpg";
