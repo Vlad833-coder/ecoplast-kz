@@ -148,7 +148,7 @@ const Index = () => {
       <header className={`sticky top-0 z-40 transition-all ${scrolled ? "bg-background/95 backdrop-blur shadow-soft" : "bg-background"}`}>
         <div className="container flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2.5">
-            <img src={ecoplastLogo} alt="Ecoplast" className="h-10 w-10 object-contain" />
+            <img src={ecoplastLogo} alt="Ecoplast" className="h-12 w-12 object-contain" />
             <span className="flex flex-col leading-tight">
               <span className="font-display text-lg font-bold text-foreground">Ecoplast</span>
               <span className="text-[10px] uppercase tracking-widest text-muted-foreground">сервисная компания</span>
@@ -471,7 +471,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-2.5">
-                <img src={ecoplastLogo} alt="Ecoplast" className="h-10 w-10 object-contain" />
+                <img src={ecoplastLogo} alt="Ecoplast" className="h-12 w-12 object-contain" />
               </div>
               <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
                 Сервисная компания. Изделия из пластика, оборудование Flex Kraft, ремонт и строительство по всему Казахстану.
