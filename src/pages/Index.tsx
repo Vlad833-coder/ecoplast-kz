@@ -40,7 +40,7 @@ import srvWelding from "@/assets/91dc30e5-32a0-46eb-b237-37817f49f1ec.webp";
 import srvPlaster from "@/assets/srv-plaster.jpg";
 import srvDesign from "@/assets/srv-design.jpg";
 import srvRoof from "@/assets/a3725026-2f82-4174-a3d1-fd23b217ba50.webp";
-import ecoplastLogo from "@/assets/ecoplast-logo.svg";
+import ecoplastLogo from "@/assets/ecoplast-logo.png";
 import srvLining from "@/assets/srv-lining.jpg";
 import galvRectifier from "@/assets/75056f35-5a0f-4799-a2a6-9dd49bcee2c2.webp";
 import galvWelding from "@/assets/e59da0f9-0086-4178-a815-61f0a1a3ac8a.webp";
